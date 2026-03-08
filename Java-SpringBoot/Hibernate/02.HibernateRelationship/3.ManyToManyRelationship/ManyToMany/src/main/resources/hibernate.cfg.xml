@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration xmlns="http://www.hibernate.org/xsd/orm/cfg">
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">
+            jdbc:postgresql://ep-steep-mountain-a16k9ffr-pooler.ap-southeast-1.aws.neon.tech/demoDB?sslmode=require&amp;channel_binding=require
+        </property>
+        <property name="hibernate.connection.username">neondb_owner</property>
+        <property name="hibernate.connection.password">npg_THVg1ixj6uKW</property>
+
+        <!-- Hibernate settings -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <mapping class="org.example.Societies"/>
+        <mapping class="org.example.Members"/>
+
+    </session-factory>
+</hibernate-configuration>
